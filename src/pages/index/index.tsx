@@ -2,6 +2,8 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
 
+import { NavBar } from '@components'
+
 export default class Index extends Component {
 
   /**
@@ -25,9 +27,16 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  handleClick = () => {
+
+  }
+
   render () {
     return (
       <View className='index'>
+        <NavBar 
+          pageName='测试'
+        />
         <Text>Hello world!</Text>
       </View>
     )
