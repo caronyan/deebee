@@ -29,7 +29,11 @@ const config = {
   defineConstants: {
   },
   alias: {
-    '@components': path.resolve(__dirname, '..', 'src/components')
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@constants': path.resolve(__dirname, '..', 'src/constants'),
+    '@actions': path.resolve(__dirname, '..', 'src/actions'),
+    '@reducers': path.resolve(__dirname, '..', 'src/reducers'),
+    '@store': path.resolve(__dirname, '..', 'src/store')
   },
   copy: {
     patterns: [
