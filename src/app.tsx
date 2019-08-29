@@ -1,6 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
+import configStore from '@store'
 import Index from './pages/index'
-
 import 'taro-ui/dist/style/index.scss'
 import './app.scss'
 
@@ -9,6 +10,8 @@ import './app.scss'
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
+
+const store = configStore()
 
 class App extends Component {
 
@@ -44,7 +47,9 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }
