@@ -15,7 +15,6 @@ export default class NavBar extends Component {
         const { pageName } = this.props
         return (
             <AtNavBar
-                className='nav-custom'
                 color='#000'
                 title={pageName}
                 leftIconType='bullet-list'
