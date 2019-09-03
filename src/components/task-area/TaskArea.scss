@@ -1,0 +1,31 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+@import "~taro-ui/dist/style/components/card.scss";
+@import "~taro-ui/dist/style/components/button.scss";
+@import "~taro-ui/dist/style/components/loading.scss";
+
+.task-group {
+    margin: 1rem 1rem 0;
+}
+
+.task-tag {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: .25rem;
+        height: 1rem;
+        left: 1rem;
+        margin-top: .2rem;
+        background-color: #B3DDD1;
+        border-radius: .1rem;
+    }    
+}
+
+.task-items {
+}
+
+.task-item {
+    padding: .25rem;
+}
