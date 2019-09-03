@@ -1,0 +1,52 @@
+import Taro, { Component, Config } from '@tarojs/taro'
+import { View, Text } from '@tarojs/components'
+import { AtCalendar } from "taro-ui"
+
+
+export default class Record extends Component {
+
+    state = {
+      
+    }
+  
+    /**
+     * 指定config的类型声明为: Taro.Config
+     *
+     * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
+     * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
+     * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
+     */
+    config: Config = {
+      navigationBarTitleText: '记录'
+    }
+  
+    componentWillMount () { }
+  
+    componentDidMount () {
+    //   this.props.getUserTasks(1)
+    }
+  
+    componentWillUnmount () { }
+  
+    componentDidShow () { }
+  
+    componentDidHide () { }
+  
+    handleClick = () => {
+  
+    }
+  
+    handleAddClick = () => {
+  
+    }
+  
+    render () {
+    //   const { tasks } = this.props
+      return (
+        <View className='record'>
+          
+        </View>
+      )
+    }
+  }
+  
