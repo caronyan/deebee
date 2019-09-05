@@ -6,14 +6,25 @@ export default class NavBar extends Component {
     constructor () {
         super(...arguments)
         this.state = {
-          current: 0
+          current: 0,
+          routes: [
+            '/pages/record/record',
+            '/pages/index/index',
+            '/pages/index/index',
+          ]
         }
       }
 
       handleClick = value => {
+        
+        Taro.navigateTo({
+          url: this.state.routes[value]
+        })
+
         this.setState({
           current: value
         })
+        
       }
       
     static defaultProps = {
@@ -23,16 +34,17 @@ export default class NavBar extends Component {
     handleListIconClick = () => {
         
     }
-
+    
     render () {
         // const { pageName } = this.props
         return (
             <AtTabBar
                 fixed
+                selectedColor='#80BEAF'
                 tabList={[
-                { title: '记录', text: 8 },
-                { title: '拍照' },
-                { title: '通讯录', dot: true }
+                { iconType: 'calendar', title: '记录' },
+                { iconType: 'check', title: '打卡' },
+                { iconType: 'user', title: '我的' }
                 ]}
                 onClick={this.handleClick.bind(this)}
                 current={this.state.current}
