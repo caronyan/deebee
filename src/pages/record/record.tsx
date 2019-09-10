@@ -1,35 +1,26 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import { AtCalendar, AtList, AtListItem } from "taro-ui"
+import { NavBar, TaskLog } from '@components'
+import { AtCalendar, AtList, AtListItem, AtSwipeAction } from "taro-ui"
 
 
 export default class Record extends Component {
 
     state = {
       markDate: [{
-          value: '2019/09/03'
+          value: '2019/09/12'
       }],
       taskRecord: [{
-          isCompleted: true,
-          taskName: '一点儿不差',
-          isMain: false,
-          remark: ''
-      }, {
-        isCompleted: false,
-        taskName: '差一点',
-        isMain: true,
-        remark: '非常重要'
-    }],
-        doneIcon: {
-            size: 20,
-            color: '#78A4FA',
-            value: 'check',
-        },
-        undoneIcon: {
-            size: 20,
-            color: '#FF4949',
-            value: 'close',
-        }
+            isCompleted: true,
+            taskName: '一点儿不差',
+            isMain: false,
+            remark: ''
+        }, {
+            isCompleted: false,
+            taskName: '差一点',
+            isMain: true,
+            remark: '非常重要'
+        }],
     }
   
     /**
@@ -62,23 +53,19 @@ export default class Record extends Component {
     handleAddClick = () => {
   
     }
-  
+
     render () {
-        const { markDate, taskRecord, doneIcon, undoneIcon } = this.state
+        const { markDate, taskRecord } = this.state
       return (
         <View className='record'>
+            <NavBar 
+                pageName='记录'
+            />
             <View>
                 <AtCalendar marks={markDate} />
             </View>
             <View>
-                <AtList>
-                    {
-                        taskRecord.map(record => (
-                            <AtListItem title={record.taskName} note={record.remark} 
-                                iconInfo={record.isCompleted?doneIcon:undoneIcon} /> 
-                        ))
-                    }
-                </AtList>
+                <TaskLog taskRecord={taskRecord} />
             </View>
         </View>
       )
