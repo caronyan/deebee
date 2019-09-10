@@ -2,6 +2,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 import configStore from '@store'
 import Index from './pages/index'
+import { NavBar, BottomBar } from '@components'
 import 'taro-ui/dist/style/index.scss'
 import './app.scss'
 
@@ -33,6 +34,27 @@ class App extends Component {
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black',
       navigationStyle: 'custom',
+    },
+    tabBar: {
+      color: '#707070',
+      selectedColor: '#80BEAF',
+      borderStyle: 'black',
+      list: [{
+        pagePath: "pages/record/record",
+        iconPath: "./assets/tab-bar/calendar.png",
+        selectedIconPath: "./assets/tab-bar/calendar-active.png",
+        text: "记录"
+      }, {
+        pagePath: "pages/index/index",
+        iconPath: "./assets/tab-bar/check.png",
+        selectedIconPath: "./assets/tab-bar/check-active.png",
+        text: "打卡"
+      }, {
+        pagePath: "pages/index/index",
+        iconPath: "./assets/tab-bar/user.png",
+        selectedIconPath: "./assets/tab-bar/user-active.png",
+        text: "我的"
+      }]
     }
   }
 

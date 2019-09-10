@@ -1,7 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import { NavBar, BottomBar, TaskArea } from '@components'
+import { NavBar, TaskArea } from '@components'
 import { AtFab } from 'taro-ui'
 import * as taskActions from '@actions/task'
 import './index.scss'
@@ -64,7 +64,6 @@ export default class Index extends Component {
             <Text className='at-fab__icon at-icon at-icon-add'></Text>
           </AtFab>
         </View>
-        <BottomBar />
       </View>
     )
   }
