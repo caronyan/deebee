@@ -26,7 +26,8 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/index/index',
-      'pages/record/record'
+      'pages/record/record',
+      'pages/space/space',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -50,7 +51,7 @@ class App extends Component {
         selectedIconPath: "./assets/tab-bar/check-active.png",
         text: "打卡"
       }, {
-        pagePath: "pages/index/index",
+        pagePath: "pages/space/space",
         iconPath: "./assets/tab-bar/user.png",
         selectedIconPath: "./assets/tab-bar/user-active.png",
         text: "我的"
