@@ -1,19 +1,14 @@
 @import "~taro-ui/dist/style/components/fab.scss";
 
-.index {
-    padding-top: 1.2rem;
-}
-
 .float-btn {
     position: fixed;
-    bottom: 4.5rem;
+    bottom: 1.5rem;
     right: 1.5rem;
 }
 
 .at-fab {
     background: #80BEAF;
-}
-
-.fab-hover {
-    background: #B3DDD1;
+    &:active {
+        background: #B3DDD1;
+    }
 }
