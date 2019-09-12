@@ -7,7 +7,10 @@ import { AtAvatar, AtGrid } from "taro-ui"
 export default class Space extends Component {
 
     state = {
-      
+        gridData: [{
+            image: '',
+            value: '关于'
+        }],
     }
   
     /**
@@ -42,14 +45,14 @@ export default class Space extends Component {
     }
 
     render () {
-        // const { markDate, taskRecord } = this.state
+        const { gridData } = this.state
       return (
         <View className='space'>
             <NavBar 
                 pageName='我的'
             />
             <View>
-                
+                <AtGrid data={gridData} />
             </View>
             <View>
                 
